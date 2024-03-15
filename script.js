@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display a loading message or spinner
     document.getElementById('apiResponse').innerHTML = '<p>Loading odds...</p>';
 
-    fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/barrysnipesv3', {
+   fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/post_sports_odds_web', {
         method: 'OPTIONS',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'html',
         },
     })
     .then(response => {
