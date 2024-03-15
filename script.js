@@ -1,8 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Display a loading message or spinner
     document.getElementById('apiResponse').innerHTML = '<p>Loading odds...</p>';
-    
-    fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/post_sports_odds_web', {
+
+    fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/barrysnipesv3', {
+        method: 'OPTIONS',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (response.ok) {
+            return fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/post_sports_odds_web', {
         method: 'GET' // Changed from 'OPTIONS' to 'GET'
         // Removed headers since you're expecting HTML response, not JSON
     })
@@ -10,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
+    })
+    
         return response.text();
     })
     .then(html => {
