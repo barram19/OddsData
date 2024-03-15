@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             throw new Error(`Network response was not ok: ${response.statusText}`);
         }
     })
-    
-        return response.text();
-    })
+
     .then(html => {
         // Assuming the server responds with HTML, display it
         document.getElementById('apiResponse').innerHTML = html;
