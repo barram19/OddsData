@@ -5,3 +5,16 @@ body {
 #apiResponse {
     margin-top: 20px;
 }
+
+ table {
+            border-collapse: collapse; /* Makes the border join nicely */
+            width: 100%; /* Optional: Sets the table to fill the width of its container */
+        }
+        th, td {
+            border: 1px solid black; /* Adds a border to table headers and cells */
+            padding: 8px; /* Adds some spacing around the cell content */
+            text-align: left; /* Aligns text to the left. Can be adjusted as needed */
+        }
+        th {
+            background-color: #f2f2f2; /* Adds a background color to the table headers for contrast */
+}
