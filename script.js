@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display a loading message or spinner
     document.getElementById('apiResponse').innerHTML = '<p>Loading odds...</p>';
 
-    fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/post_sports_odds_web') // Default to GET method
+    fetch('https://us-central1-cbbbot-413503.cloudfunctions.net/post_sports_odds_webpage') // Default to GET method
     .then(response => {
         if (!response.ok) {
             // If the server response was not OK, throw an error to be caught in the catch block
