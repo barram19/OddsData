@@ -6,15 +6,30 @@ body {
     margin-top: 20px;
 }
 
- table {
-            border-collapse: collapse; /* Makes the border join nicely */
-            width: 100%; /* Optional: Sets the table to fill the width of its container */
-        }
-        th, td {
-            border: 1px solid black; /* Adds a border to table headers and cells */
-            padding: 8px; /* Adds some spacing around the cell content */
-            text-align: left; /* Aligns text to the left. Can be adjusted as needed */
-        }
-        th {
-            background-color: #f2f2f2; /* Adds a background color to the table headers for contrast */
+/* Style for the table itself */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Style for table cells */
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Adds zebra-striping to table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
