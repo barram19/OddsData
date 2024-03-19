@@ -4,16 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
         headers: {
             'Content-Type': 'application/json',
         },
-        // Sending an empty content field or a predefined command if your function requires it
         body: JSON.stringify({
             content: "Fetch upcoming games and odds"
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        // Assuming 'data.messages' contains your HTML content
-        // Find the HTML element where you want to display the odds and inject the content
-        document.getElementById('oddsDisplay').innerHTML = data.messages.join('');
+    .then(response => response.text()) // Change this to .text()
+    .then(html => {
+        document.getElementById('oddsDisplay').innerHTML = html; // Directly use the HTML response
     })
     .catch((error) => {
         console.error('Error:', error);
