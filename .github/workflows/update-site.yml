@@ -3,7 +3,7 @@ name: Update GitHub Pages Content
 on:
   schedule:
     # Runs at 5 minutes past every hour (adjust as needed)
-    - cron: '5 * * * *'
+    - cron: '40 * * * *'
 
 jobs:
   fetch-and-update-content:
