@@ -22,3 +22,8 @@ jobs:
         git add -A
         git commit -m "Update site content" -a || echo "No changes to commit"
         git push
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 * * * *'
